@@ -10,7 +10,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string){
 event http_done(){
        for( x in realtion ){
            if( |realtion[x]| >= 3){
-               print x," is a proxy";
+               print fmt("%s is a proxy",x);
             }
         }
 }

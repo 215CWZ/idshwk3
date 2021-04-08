@@ -7,7 +7,7 @@ event http_header(c: connection, is_orig: bool, name: string, value: string){
                realtion[c$id$orig_h]=set(value);}
         }
 }
-event http_done(){
+event zeek_done(){
        for( x in realtion ){
            if( |realtion[x]| >= 3){
                print fmt("%s is a proxy",x);
